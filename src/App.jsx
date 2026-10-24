@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { add } from "./calculator";
+import { subtract } from "./calculator";
 export default function App() {
 const [first, setFirst] = useState("");
 const [second, setSecond] = useState("");
@@ -31,6 +32,9 @@ onChange={(event) => setSecond(event.target.value)}
 </div>
 <button onClick={() => setResult(add(first, second))}>
 Add Numbers
+</button>
+<button onClick={() => setResult(subtract(first, second))}>
+Subtract Numbers
 </button>
 {result !== null && <h2>Result: {result}</h2>}
 </main>
